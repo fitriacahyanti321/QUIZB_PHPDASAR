@@ -1,0 +1,28 @@
+<?php
+
+function luas_lingkaran($jari) {
+    return pi(3.14) * pow($jari, 2);
+}
+
+function keliling_lingkaran($jari) {
+    return 2 * pi(3.14) * $jari;
+}
+
+function luas_persegi($panjang, $lebar) {
+    return $panjang * $lebar;
+}
+
+for ($i = 1; $i <= 100; $i++) {
+    echo number_format($i, 2) . "\n";
+    if ($i % 3 == 0) {
+        echo number_format(luas_lingkaran($i / 3), 2) . "\n";
+    }
+    if ($i % 5 == 0) {
+        echo number_format(keliling_lingkaran($i / 5), 2) . "\n";
+    }
+    if ($i % 3 == 0 && $i % 5 == 0) {
+        echo number_format(luas_persegi($i / 3, $i / 5), 2) . "\n";
+    }
+}
+
+?>
